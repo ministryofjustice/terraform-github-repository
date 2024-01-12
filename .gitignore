@@ -1,0 +1,13 @@
+.env
+.terraform/
+coverage/
+venv/
+env/
+.idea/
+.idea/*
+.DS_STORE
+.vscode
+*.code-workspace
+*.sha256
+terraform.tfstate
+terraform.tfstate.backup
