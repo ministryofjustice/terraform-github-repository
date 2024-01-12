@@ -8,7 +8,7 @@
 
 module "template" {
 
-  source = "github.com/ministryofjustice/modernisation-platform-terraform-module-template"
+  source = "github.com/ministryofjustice/operations-engineering-terraform-github-repositories"
 
   tags             = local.tags
   application_name = local.application_name
@@ -22,7 +22,7 @@ module "template" {
 <!--- END_TF_DOCS --->
 
 ## Looking for issues?
-If you're looking to raise an issue with this module, please create a new issue in the [Modernisation Platform repository](https://github.com/ministryofjustice/modernisation-platform/issues).
+If you're looking to raise an issue with this module, please create a new issue in the [Operations Engineering repository](https://github.com/ministryofjustice/operations-engineering/issues).
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
