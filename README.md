@@ -29,12 +29,14 @@ If you're looking to raise an issue with this module, please create a new issue 
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
 
 ## Modules
 
@@ -42,14 +44,28 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [github_actions_secret.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
+| [github_branch_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_repository.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository_tag_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_tag_protection) | resource |
+| [github_actions_public_key.default](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/actions_public_key) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_application_name"></a> [application\_name](#input\_application\_name) | Name of application | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Repository description | `string` | n/a | yes |
+| <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Repository homepage URL | `string` | `""` | no |
+| <a name="input_name"></a> [name](#input\_name) | Repository name | `string` | n/a | yes |
+| <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
+| <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Common tags to be used by all resources | `map(string)` | n/a | yes |
+| <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | n/a | yes |
+| <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
+| <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
 
 ## Outputs
 
