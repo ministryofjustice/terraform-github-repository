@@ -31,7 +31,7 @@ variable "secrets" {
 
 variable "topics" {
   type    = list(string)
-  default = ["operations-engineering"]
+  default = []
 }
 
 variable "type" {
