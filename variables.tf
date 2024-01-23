@@ -30,7 +30,8 @@ variable "secrets" {
 }
 
 variable "topics" {
-  type        = list(string)
+  type    = list(string)
+  default = []
 }
 
 variable "type" {
@@ -49,4 +50,10 @@ variable "required_checks" {
   type        = list(string)
   description = "List of required checks"
   default     = []
+}
+
+variable "has_discussions" {
+  type        = bool
+  description = "Enable repository discussions"
+  default     = false
 }
