@@ -64,7 +64,7 @@ No modules.
 | <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Common tags to be used by all resources | `map(string)` | n/a | yes |
-| <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | `[]` | no |
+| <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | `["operations-engineering"]` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
 
