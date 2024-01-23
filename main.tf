@@ -1,4 +1,5 @@
 # Repository basics
+#tfsec:ignore:github-repositories-private
 resource "github_repository" "default" {
   name                   = var.name
   description            = join(" • ", [var.description, "This repository is defined and managed in Terraform"])
@@ -48,6 +49,7 @@ resource "github_repository" "default" {
   }
 }
 
+#tfsec:ignore:github-branch_protections-require_signed_commits
 resource "github_branch_protection" "default" {
   repository_id          = github_repository.default.id
   pattern                = "main"
