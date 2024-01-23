@@ -8,6 +8,7 @@ resource "github_repository" "default" {
   has_projects           = true
   has_wiki               = var.type == "core" ? true : false
   has_downloads          = true
+  has_discussions        = var.has_discussions
   is_template            = var.type == "template" ? true : false
   allow_merge_commit     = true
   allow_squash_merge     = true
@@ -17,7 +18,7 @@ resource "github_repository" "default" {
   archived               = false
   archive_on_destroy     = true
   vulnerability_alerts   = true
-  topics                 = ["operations-engineering"]
+  topics                 = concat(var.topics, ["operations-engineering"])
 
   security_and_analysis {
     dynamic "advanced_security" {
@@ -48,9 +49,9 @@ resource "github_repository" "default" {
 }
 
 resource "github_branch_protection" "default" {
-  repository_id  = github_repository.default.id
-  pattern        = "main"
-  enforce_admins = true
+  repository_id          = github_repository.default.id
+  pattern                = "main"
+  enforce_admins         = true
   require_signed_commits = false
 
   required_status_checks {
