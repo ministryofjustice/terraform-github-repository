@@ -8,9 +8,8 @@
 
 module "template" {
 
-  source = "github.com/ministryofjustice/operations-engineering-terraform-github-repositories"
+  source = "github.com/ministryofjustice/operations-engineering-terraform-github-repository?ref=X.X.X"
 
-  tags             = local.tags
   application_name = local.application_name
 
 }
@@ -47,6 +46,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [github_actions_secret.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
+| [github_actions_variable.example_variable](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_variable) | resource |
 | [github_branch_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_repository.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository_tag_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_tag_protection) | resource |
@@ -63,9 +63,9 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Repository name | `string` | n/a | yes |
 | <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | Common tags to be used by all resources | `map(string)` | n/a | yes |
 | <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | `[]` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
+| <a name="input_variables"></a> [variables](#input\_variables) | key:value map for repository variables | `map(any)` | `{}` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
 
 ## Outputs

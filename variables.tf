@@ -1,7 +1,3 @@
-variable "tags" {
-  type        = map(string)
-  description = "Common tags to be used by all resources"
-}
 variable "application_name" {
   type        = string
   description = "Name of application"
@@ -26,6 +22,12 @@ variable "homepage_url" {
 variable "secrets" {
   type        = map(any)
   description = "key:value map for GitHub actions secrets"
+  default     = {}
+}
+
+variable "variables" {
+  type        = map(any)
+  description = "key:value map for repository variables"
   default     = {}
 }
 
