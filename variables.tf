@@ -29,6 +29,12 @@ variable "secrets" {
   default     = {}
 }
 
+variable "variables" {
+  type        = map(any)
+  description = "key:value map for repository variables"
+  default     = {}
+}
+
 variable "topics" {
   type    = list(string)
   default = []
