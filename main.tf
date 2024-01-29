@@ -88,7 +88,7 @@ resource "github_actions_secret" "default" {
   plaintext_value = each.value
 }
 
-resource "github_actions_variable" "example_variable" {
+resource "github_actions_variable" "default" {
   for_each      = var.variables
   repository    = github_repository.default.id
   variable_name = each.key
