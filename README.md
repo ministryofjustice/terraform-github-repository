@@ -9,7 +9,7 @@
 module "template" {
 
   source  = "github.com/ministryofjustice/terraform-github-repository
-  version = n.n.n
+  version = "n.n.n"
 
   application_name = local.application_name
 
