@@ -25,12 +25,13 @@ jobs:
       with:
         fetch-depth: 0
     - name: Run Analysis
-      uses: ministryofjustice/github-actions/terraform-static-analysis@7c689fe2de15e1692f5cceceb132919ab854081c # v14
+      uses: ministryofjustice/github-actions/terraform-static-analysis@7855159a5c3a9bcd658207c894cc4ed22bd35a22 # v15.3.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         scan_type: single
-        tfsec_exclude: aws-cloudwatch-log-group-customer-key, aws-iam-no-policy-wildcards, aws-vpc-no-public-egress-sgr, aws-iam-block-kms-policy-wildcard, aws-vpc-add-description-to-security-group
+        tflint_exclude: terraform_unused_declarations
+        tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
 
   terraform-static-analysis-full-scan:
@@ -45,10 +46,11 @@ jobs:
       with:
         fetch-depth: 0
     - name: Run Analysis
-      uses: ministryofjustice/github-actions/terraform-static-analysis@7c689fe2de15e1692f5cceceb132919ab854081c # v14
+      uses: ministryofjustice/github-actions/terraform-static-analysis@7855159a5c3a9bcd658207c894cc4ed22bd35a22 # v15.3.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         scan_type: full
-        tfsec_exclude: aws-cloudwatch-log-group-customer-key, aws-iam-no-policy-wildcards, aws-vpc-no-public-egress-sgr, aws-iam-block-kms-policy-wildcard, aws-vpc-add-description-to-security-group
+        tflint_exclude: terraform_unused_declarations
+        tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
