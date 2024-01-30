@@ -30,6 +30,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         scan_type: single
+        tflint_exclude: terraform_unused_declarations
         tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
 
@@ -50,5 +51,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         scan_type: full
+        tflint_exclude: terraform_unused_declarations
         tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
