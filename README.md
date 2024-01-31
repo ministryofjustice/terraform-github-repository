@@ -6,13 +6,13 @@
 
 ```hcl
 
-module "template" {
+module "repository" {
+  source  = "ministryofjustice/repository/github"
+  version = "0.0.5"
 
-  source  = "github.com/ministryofjustice/terraform-github-repository
-  version = "n.n.n"
-
-  application_name = local.application_name
-
+  name = ""
+  application_name = ""
+  description = ""
 }
 
 ```
