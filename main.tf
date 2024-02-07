@@ -30,7 +30,7 @@ resource "github_repository" "default" {
   archived               = false
   archive_on_destroy     = true
   vulnerability_alerts   = true
-  topics                 = concat(var.topics, ["operations-engineering"])
+  topics                 = var.topics
 
   security_and_analysis {
     dynamic "advanced_security" {
