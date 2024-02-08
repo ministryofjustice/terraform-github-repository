@@ -1,8 +1,3 @@
-variable "application_name" {
-  type        = string
-  description = "Name of application"
-}
-
 variable "name" {
   type        = string
   description = "Repository name"

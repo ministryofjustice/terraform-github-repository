@@ -1,15 +1,15 @@
 # Contribution guidelines
 
-When contributing to this repository, please first discuss the change you wish to make via issue, slack, or any other method with the owners of this repository before making a change.
+When contributing to this repository, please first discuss the change you wish to make via issue, slack, or any other method with the owners of this repository.
 
-Our primary slack channel for contributors who wish to get in touch is #ask-modernisation-platform.
+Our primary slack channel for contributors who wish to get in touch is #ask-operations-engineering.
 
 ## Contributing
 
 If you’ve got an idea or suggestion you can:
 
-- [Contact the Modernisation Platform team](https://mojdt.slack.com/archives/C01A7QK5VM1)
-- [Create a GitHub issue](https://github.com/ministryofjustice/modernisation-platform/issues)
+- [Contact the Operations Engineering team](https://moj.enterprise.slack.com/archives/C01BUKJSZD4)
+- [Create a GitHub issue in our main repository](https://github.com/ministryofjustice/operations-engineering/issues)
 
 ## Raising bugs
 
@@ -21,45 +21,36 @@ When describing the bug, it's useful to follow the format:
 - What you expected to happen
 - What happened
 
-We have a [standard template](https://github.com/ministryofjustice/modernisation-platform/issues/new?assignees=&labels=bug&projects=&template=bug-template.md) for raising bugs.
-
 ## Suggesting features
 
-Please [raise feature requests as issues](https://github.com/ministryofjustice/modernisation-platform/issues/new?assignees=&labels=&projects=&template=story-template.md) before contributing any code.
-
-Raising an issue ensures they are openly discussed and before spending any time on them.
+Please raise feature requests as issues using our [feature request template](https://github.com/ministryofjustice/operations-engineering/issues/new?assignees=&labels=github%2Cfeature+request%2Cthird+party&projects=&template=github-feature-requests.md&title=). This ensures requests are openly discussed before any code is contributed.
 
 ## Security vulnerabilities
 
-Please contact us through [Slack](https://mojdt.slack.com/archives/C01A7QK5VM1) to discuss the vulnerability first, before [raising an issue](https://github.com/ministryofjustice/modernisation-platform/security/advisories/new).
+Please contact us via [Slack](https://mojdt.slack.com/archives/C01BUKJSZD4) to discuss the vulnerability first. Then raise an issue using our [report a security vulnerabilty template](https://github.com/ministryofjustice/operations-engineering/security/advisories/new).
 
 ## Contributing code
 
 ### Terraform Versions
 
-We use Hashicorp [Terraform](https://www.terraform.io/) to deliver Infrastructure-as-Code.
+We use Hashicorp [Terraform](https://www.terraform.io/) to deliver infrastructure as code.
 
-We stay up-to-date with the latest versions of Terraform, but with Terraform Providers the Modernisation Platform Team control the version in use.
+We stay up to date with the latest version of Terraform, but control the version of the Terraform Providers in use.
 
 ### Tests
 
-Our versioned Terraform modules have unit tests; these are written using [Terratest](https://pkg.go.dev/github.com/gruntwork-io/terratest#section-readme) and Google Go.
+Our versioned Terraform modules have unit tests; these are written using [Terratest](https://pkg.go.dev/github.com/gruntwork-io/terratest#section-readme) and Go.
 
-Your branch should ensure that changes you have made are reflected in the tests, and that these unit tests pass before raising a Pull Request.
+Your branch should ensure that changes you have made are reflected in the tests, and that these unit tests pass before raising a pull request.
 
-A GitHub Action will automatically run tests against your Pull Request once you have raised it.
+A GitHub Action will automatically run tests against your pull request once you have raised it.
 
 ### Versioning
 
-Where appropriate, versioning is based on your commit messages by using [Semantic Versioning](https://semver.org/).
+Where appropriate, versioning is based on your commit message using [Semantic Versioning](https://semver.org/).
 
-Our [Modernisation Platform](https://github.com/ministryofjustice/modernisation-platform/) and [Modernisation Platform Environments](https://github.com/ministryofjustice/modernisation-platform-environments/) repositories are deployed with CI/CD from the _main_ branch, and thus are not versioned.
-
-Terraform modules which are used by the [Modernisation Platform](https://github.com/ministryofjustice/modernisation-platform/) and [Modernisation Platform Environments](https://github.com/ministryofjustice/modernisation-platform-environments/) repositories
-are versioned using GitHub Tags and Releases following Semantic Versioning.
-
-When you come to raise a pull request, please explain the context for your pull request so that your changes are easier to understand.
+When raising a pull request please provide context so that your changes are easier to understand.
 
 ### Release
 
-Releases are actioned by the Modernisation Platform team.
+Releases are actioned by the Operations Engineering team.

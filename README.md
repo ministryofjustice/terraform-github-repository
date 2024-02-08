@@ -59,7 +59,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_application_name"></a> [application\_name](#input\_application\_name) | Name of application | `string` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Repository description | `string` | n/a | yes |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Enable repository discussions | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Repository homepage URL | `string` | `""` | no |
