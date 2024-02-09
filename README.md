@@ -72,5 +72,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_repository_name"></a> [repository\_name](#output\_repository\_name) | Name of the created repository |
 <!-- END_TF_DOCS -->
