@@ -110,7 +110,7 @@ resource "github_team_repository" "admin" {
   for_each = var.team_access != null && var.team_access.admin != null ? { for team in var.team_access.admin : team => team } : {}
 
   team_id    = each.value
-  repository = github_repository.this.name
+  repository = github_repository.default.name
   permission = "admin"
 }
 
@@ -118,7 +118,7 @@ resource "github_team_repository" "maintain" {
   for_each = var.team_access != null && var.team_access.maintain != null ? { for team in var.team_access.maintain : team => team } : {}
 
   team_id    = each.value
-  repository = github_repository.this.name
+  repository = github_repository.default.name
   permission = "maintain"
 }
 
@@ -126,6 +126,6 @@ resource "github_team_repository" "push" {
   for_each = var.team_access != null && var.team_access.push != null ? { for team in var.team_access.push : team => team } : {}
 
   team_id    = each.value
-  repository = github_repository.this.name
+  repository = github_repository.default.name
   permission = "push"
 }
