@@ -53,6 +53,9 @@ No modules.
 | [github_branch_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_repository.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository_tag_protection.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_tag_protection) | resource |
+| [github_team_repository.admin](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_repository.maintain](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_repository.push](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
 | [github_actions_public_key.default](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/actions_public_key) | data source |
 
 ## Inputs
@@ -65,11 +68,11 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | Repository name | `string` | n/a | yes |
 | <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
+| <a name="input_team_access"></a> [team\_access](#input\_team\_access) | Team access types for created repository | <pre>object({<br>    admin    = optional(list(string))<br>    maintain = optional(list(string))<br>    push     = optional(list(string))<br>  })</pre> | <pre>{<br>  "admin": [],<br>  "maintain": [],<br>  "push": []<br>}</pre> | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | `[]` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | key:value map for repository variables | `map(any)` | `{}` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
-| <a name="input_team_access"></a> [team_access](#input\_team__access) | Team access types for created repository: `admin`, `maintain`, `push` | `list(string)` | `[]` | no |
 
 ## Outputs
 
