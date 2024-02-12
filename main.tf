@@ -129,3 +129,11 @@ resource "github_team_repository" "push" {
   repository = github_repository.default.name
   permission = "push"
 }
+
+resource "github_team_repository" "pull" {
+  for_each = var.team_access != null && var.team_access.pull != null ? { for team in var.team_access.pull : team => team } : {}
+
+  team_id    = each.value
+  repository = github_repository.default.name
+  permission = "pull"
+}

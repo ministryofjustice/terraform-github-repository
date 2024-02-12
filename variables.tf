@@ -60,11 +60,13 @@ variable "team_access" {
     admin    = optional(list(string))
     maintain = optional(list(string))
     push     = optional(list(string))
+    pull     = optional(list(string))
   })
   description = "Team access types for created repository"
   default = {
     admin    = []
     maintain = []
     push     = []
+    pull     = []
   }
 }
