@@ -54,3 +54,19 @@ variable "has_discussions" {
   description = "Enable repository discussions"
   default     = false
 }
+
+variable "team_access" {
+  type = object({
+    admin    = optional(list(string))
+    maintain = optional(list(string))
+    push     = optional(list(string))
+    pull     = optional(list(string))
+  })
+  description = "Team access types for created repository"
+  default = {
+    admin    = []
+    maintain = []
+    push     = []
+    pull     = []
+  }
+}
