@@ -2,6 +2,7 @@ terraform {
   backend "s3" {
     acl            = "private"
     bucket         = "cloud-platform-91d489cf0077d4786792c06920fa7f61"
+    dynamodb_table = ""
     encrypt        = true
     key            = "terraform/github-repos/operations-engineering-dev/terraform.tfstate"
     region         = "eu-west-2"
