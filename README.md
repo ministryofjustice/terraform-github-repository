@@ -63,6 +63,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_archive_on_destroy"></a> [archive\_on\_destroy](#input\_archive\_on\_destroy) | Archive repository instead of deleting it on destroy | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | Repository description | `string` | n/a | yes |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Enable repository discussions | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Repository homepage URL | `string` | `""` | no |
@@ -74,8 +75,6 @@ No modules.
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | key:value map for repository variables | `map(any)` | `{}` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
-| <a name="archive_on_destroy"></a> [archive_on_destroy](#archive\_on\_destroy) | Archive repository instead of deleting it on destroy | `bool` | `true` | no |
-
 
 ## Outputs
 
