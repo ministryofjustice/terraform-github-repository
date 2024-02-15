@@ -9,6 +9,7 @@ env:
 jobs:
   go-tests:
     permissions:
+      id-token: write
       contents: read
       actions: write
     name: Run Go Unit Tests
