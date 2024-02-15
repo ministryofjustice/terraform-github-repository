@@ -74,6 +74,8 @@ No modules.
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | key:value map for repository variables | `map(any)` | `{}` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility type: `public`, `internal`, `private` | `string` | `"public"` | no |
+| <a name="archive_on_destroy"></a> [archive_on_destroy](#archive\_on\_destroy) | Archive repository instead of deleting it on destroy | `bool` | `true` | no |
+
 
 ## Outputs
 
