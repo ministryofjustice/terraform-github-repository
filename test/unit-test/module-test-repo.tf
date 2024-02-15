@@ -11,4 +11,10 @@ module "module-test-repo" {
   variables = {
     TEST_VARIABLE = "test"
   }
+  team_access = {
+    maintain = [data.github_team.operations_engineering_test.id]
+    push = [data.github_team.test_team_access.id]
+    admin = [data.github_team.test_team_one.id]
+    pull = [data.github_team.test_team_two.id]
+  }
 }
