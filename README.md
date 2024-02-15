@@ -63,6 +63,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_archive_on_destroy"></a> [archive\_on\_destroy](#input\_archive\_on\_destroy) | Archive repository instead of deleting it on destroy | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | Repository description | `string` | n/a | yes |
 | <a name="input_has_discussions"></a> [has\_discussions](#input\_has\_discussions) | Enable repository discussions | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Repository homepage URL | `string` | `""` | no |

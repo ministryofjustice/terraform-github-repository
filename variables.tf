@@ -70,3 +70,9 @@ variable "team_access" {
     pull     = []
   }
 }
+
+variable "archive_on_destroy" {
+  type        = bool
+  description = "Archive repository instead of deleting it on destroy"
+  default     = true
+}
