@@ -5,7 +5,7 @@ output "name" {
 }
 
 output "description" {
-  value = module.module-test-repo.repository.decription
+  value = module.module-test-repo.repository.description
 }
 
 output "homepage_url" {
@@ -69,13 +69,13 @@ output "push_permission" {
 }
 
 output "pull_team_id" {
-  value = module.module-test-repo.pushers[data.github_team.test_team_two.id].team_id
+  value = module.module-test-repo.pullers[data.github_team.test_team_two.id].team_id
 }
 
 output "pull_repository" {
-  value = module.module-test-repo.pushers[data.github_team.test_team_two.id].repository
+  value = module.module-test-repo.pullers[data.github_team.test_team_two.id].repository
 }
 
 output "pull_permission" {
-  value = module.module-test-repo.pushers[data.github_team.test_team_two.id].permission
+  value = module.module-test-repo.pullers[data.github_team.test_team_two.id].permission
 }
