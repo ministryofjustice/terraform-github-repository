@@ -9,3 +9,7 @@ output "branch_protection_pattern" {
 output "tag_protection_pattern" {
   value = module.module-test-repo.tag_protection.pattern
 }
+
+output "test_actions_variable_value" {
+  value = module.module-test-repo.actions_variables["TEST_VARIABLE"]
+}

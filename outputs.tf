@@ -9,3 +9,7 @@ output "branch_protection" {
 output "tag_protection" {
   value = github_repository_tag_protection.default 
 }
+
+output "actions_variables" {
+  value = github_actions_variable.default
+}
