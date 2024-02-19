@@ -33,7 +33,7 @@ func TestModule(t *testing.T) {
 	adminRepository := terraform.Output(t, terraformOptions, "admin_repository")
 	adminPermission := terraform.Output(t, terraformOptions, "admin_permission")
 
-	assert.Regexp(t, regexp.MustCompile(`test`), adminTeamId)
+	assert.Regexp(t, regexp.MustCompile(`9494611`), adminTeamId)
 	assert.Regexp(t, regexp.MustCompile(`module-test-repo`), adminRepository)
 	assert.Regexp(t, regexp.MustCompile(`admin`), adminPermission)
 }
