@@ -19,9 +19,9 @@ func TestModule(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	repositoryName := terraform.Output(t, terraformOptions, "repository_name")
-	githubBranchProtectionPattern := terraform.Output(t, terraformOptions, "github_branch_protection_pattern")
-	githubRepositoryTag_protectionPattern := terraform.Output(t, terraformOptions, "github_repository_tag_protection_pattern")
-	githubActionsVariableValue := terraform.Output(t, terraformOptions, "github_actions_variable_value")
+	// githubBranchProtectionPattern := terraform.Output(t, terraformOptions, "github_branch_protection_pattern")
+	// githubRepositoryTag_protectionPattern := terraform.Output(t, terraformOptions, "github_repository_tag_protection_pattern")
+	// githubActionsVariableValue := terraform.Output(t, terraformOptions, "github_actions_variable_value")
 
 	assert.Regexp(t, regexp.MustCompile(`^module-test-repo`), repositoryName)
 	// assert.Regexp(t, regexp.MustCompile(`^main`), githubBranchProtectionPattern)
