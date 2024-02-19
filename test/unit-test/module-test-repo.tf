@@ -2,7 +2,7 @@ module "module-test-repo" {
   source  = "github.com/ministryofjustice/terraform-github-repository?ref=unit-tests"
 
   name            = "module-test-repo"
-  description     = "THis repository was created by the terraform github repository unit test"
+  description     = "This repository was created by the terraform github repository unit test"
   homepage_url    = "https://github.com/ministryofjustice/terraform-github-repository"
   has_discussions = true
   topics          = ["operations-engineering"]
