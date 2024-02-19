@@ -1,0 +1,40 @@
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+permissions: {}
+env:
+  TF_VAR_github_token: ${{ secrets.TERRAFORM_TEST_ORG_PAT }}
+  TF_IN_AUTOMATION: true
+jobs:
+  go-tests:
+    permissions:
+      id-token: write
+      contents: read
+      actions: write
+    name: Run Go Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.TERRAFORM_GITHUB_REPOS_S3_ROLE_ARN_DEV}}
+          aws-region: eu-west-2
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 1.18
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.6
+          terraform_wrapper: false
+
+      - name: Tidy Go Modules
+        working-directory: test
+        run: go mod tidy
+
+      - name: Run Go Tests
+        working-directory: test
+        run: go test -v
