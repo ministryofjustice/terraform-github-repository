@@ -32,7 +32,7 @@ func TestModule(t *testing.T) {
 	assert.Regexp(t, regexp.MustCompile(`https://github.com/ministryofjustice/terraform-github-repository`), homepageUrl)
 	assert.Regexp(t, regexp.MustCompile(`public`), visibility)
 
-	
+
 	// Protection Rules and Actions Variables
 
 	// Terraform Outputs
@@ -74,11 +74,11 @@ func TestModule(t *testing.T) {
 	assert.Regexp(t, regexp.MustCompile(`module-test-repo`), maintainRepository)
 	assert.Regexp(t, regexp.MustCompile(`maintain`), maintainPermission)
 
-	assert.Regexp(t, regexp.MustCompile(`test`), pushTeamId)
+	assert.Regexp(t, regexp.MustCompile(`9472191`), pushTeamId)
 	assert.Regexp(t, regexp.MustCompile(`module-test-repo`), pushRepository)
 	assert.Regexp(t, regexp.MustCompile(`push`), pushPermission)
 
-	assert.Regexp(t, regexp.MustCompile(`test`), pullTeamId)
+	assert.Regexp(t, regexp.MustCompile(`9494804`), pullTeamId)
 	assert.Regexp(t, regexp.MustCompile(`module-test-repo`), pullRepository)
 	assert.Regexp(t, regexp.MustCompile(`pull`), pullPermission)
 }
