@@ -33,7 +33,7 @@ jobs:
           terraform_wrapper: false
 
       - name: Tidy Go Modules
-        working-directory: tidy
+        working-directory: test
         run: go mod tidy
 
       - name: Download Go Modules
