@@ -25,6 +25,6 @@ func TestModule(t *testing.T) {
 
 	assert.Regexp(t, regexp.MustCompile(`module-test-repo`), repositoryName)
 	assert.Regexp(t, regexp.MustCompile(`main`), branchProtectionPattern)
-	assert.Regexp(t, regexp.MustCompile(`*`), tagProtectionPattern)
+	assert.Regexp(t, regexp.MustCompile(`\*`), tagProtectionPattern)
 	assert.Regexp(t, regexp.MustCompile(`test`), testActionsVariableValue)
 }
