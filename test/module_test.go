@@ -23,6 +23,6 @@ func TestModule(t *testing.T) {
 	Tag_protectionPattern := terraform.Output(t, terraformOptions, "tag_protection_pattern")
 
 	assert.Regexp(t, regexp.MustCompile(`^module-test-repo`), repositoryName)
-	assert.Regexp(t, regexp.MustCompile(`^main`), BranchProtectionPattern)
+	assert.Regexp(t, regexp.MustCompile(`^task*`), BranchProtectionPattern)
 	assert.Regexp(t, regexp.MustCompile(`^*`), Tag_protectionPattern)
 }
