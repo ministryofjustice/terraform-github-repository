@@ -11,5 +11,5 @@ output "tag_protection_pattern" {
 }
 
 output "test_actions_variable_value" {
-  value = module.module-test-repo.actions_variables["TEST_VARIABLE"]
+  value = module.module-test-repo.actions_variables["TEST_VARIABLE"].value
 }
