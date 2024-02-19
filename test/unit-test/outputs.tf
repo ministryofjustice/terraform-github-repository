@@ -13,3 +13,17 @@ output "tag_protection_pattern" {
 output "test_actions_variable_value" {
   value = module.module-test-repo.actions_variables["TEST_VARIABLE"].value
 }
+
+# Team-repo associations
+
+output "admin_team_id" {
+  value = module.module-test-repo.admins[data.github_team.test_team_one.id].team_id
+}
+
+output "admin_repository" {
+  value = module.module-test-repo.admins[data.github_team.test_team_one.id].repository
+}
+
+output "admin_permission" {
+  value = module.module-test-repo.admins[data.github_team.test_team_one.id].permission
+}
