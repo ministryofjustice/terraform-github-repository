@@ -32,6 +32,10 @@ jobs:
           terraform_version: 1.6.6
           terraform_wrapper: false
 
+      - name: Tidy Go Modules
+        working-directory: tidy
+        run: go mod tidy
+
       - name: Download Go Modules
         working-directory: test
         run: go mod download
@@ -39,4 +43,3 @@ jobs:
       - name: Run Go Tests
         working-directory: test
         run: go test -v
-        
