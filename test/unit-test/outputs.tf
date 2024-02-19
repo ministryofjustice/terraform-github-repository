@@ -1,5 +1,5 @@
 output "repository_name" {
-  value = module.module-test-repo.name 
+  value = module.module-test-repo.repository.name 
 }
 
 # output "github_branch_protection_pattern" {
