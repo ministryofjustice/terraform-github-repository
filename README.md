@@ -80,5 +80,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_branch_protection"></a> [branch\_protection](#output\_branch\_protection) | n/a |
 | <a name="output_repository"></a> [repository](#output\_repository) | n/a |
+| <a name="output_tag_protection"></a> [tag\_protection](#output\_tag\_protection) | n/a |
 <!-- END_TF_DOCS -->
