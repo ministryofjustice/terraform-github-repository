@@ -1,6 +1,5 @@
 module "module-test-repo" {
-  source  = "ministryofjustice/repository/github"
-  version = "0.0.8"
+  source  = "github.com/ministryofjustice/terraform-github-repository?ref=unit-tests"
 
   name            = "module-test-repo"
   description     = "THis repository was created by the terraform github repository unit test"
