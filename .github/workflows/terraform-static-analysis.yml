@@ -20,6 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name != 'workflow_dispatch'
     steps:
+    - name: Delete Old Comments
+      uses: maheshrayas/action-pr-comment-delete@v3.0
+      with:
+        github_token: '${{ secrets.GITHUB_TOKEN }}'
+        org: ministryofjustice
+        repo: operations-engineering
+        user: 'github-actions[bot]' 
+        issue: '${{github.event.number}}'
     - name: Checkout
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       with:
@@ -30,27 +38,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         scan_type: single
-        tflint_exclude: terraform_unused_declarations
-        tfsec_trivy: trivy
-        checkov_exclude: CKV_GIT_1
-
-  terraform-static-analysis-full-scan:
-    permissions:
-      pull-requests: write
-    name: Terraform Static Analysis - scan all directories
-    runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
-    steps:
-    - name: Checkout
-      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      with:
-        fetch-depth: 0
-    - name: Run Analysis
-      uses: ministryofjustice/github-actions/terraform-static-analysis@7855159a5c3a9bcd658207c894cc4ed22bd35a22 # v15.3.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        scan_type: full
         tflint_exclude: terraform_unused_declarations
         tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
