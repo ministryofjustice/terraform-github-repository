@@ -90,3 +90,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@cdcdbb579706841c47f7063dda365e292e5cad7a # v2.13.4
         with:
           sarif_file: ./checkov.sarif
+
