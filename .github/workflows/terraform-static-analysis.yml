@@ -25,7 +25,7 @@ jobs:
       with:
         github_token: '${{ secrets.GITHUB_TOKEN }}'
         org: ministryofjustice
-        repo: operations-engineering
+        repo: terraform-github-repository
         user: 'github-actions[bot]' 
         issue: '${{github.event.number}}'
     - name: Checkout
