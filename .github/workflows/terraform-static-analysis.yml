@@ -15,6 +15,7 @@ permissions:
 jobs:
   terraform-static-analysis:
     permissions:
+      id-token: write
       pull-requests: write
     name: Terraform Static Analysis
     runs-on: ubuntu-latest
