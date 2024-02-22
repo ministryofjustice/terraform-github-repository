@@ -6,7 +6,7 @@ from tftest import TerraformTest
 @pytest.fixture(scope='module')
 def tf_test():
     fixtures_dir = os.path.join(os.path.dirname(__file__), 'fixtures/github_repos')
-    print(f"Fixtures Firectory: {fixtures_dir}")
+    print(f"Fixtures Directory: {fixtures_dir}")
     tf = TerraformTest(tfdir=fixtures_dir)
     tf.setup(cleanup_on_exit=True)
     yield tf
@@ -15,8 +15,8 @@ def tf_test():
 def test_variables_presence(tf_test):
     plan = tf_test.plan(output=True)
     expected_variables = {
-        'name': 'module-test-repo',
-        'description': 'This repository was created by the terraform github repository unit test',
+        'name': 'github_token',
+        'description': 'Required by the GitHub Terraform provider',
         'visibility': 'private',
     }
 
@@ -27,7 +27,7 @@ def test_variables_presence(tf_test):
 
 def test_module_plan(tf_test):
     plan = tf_test.plan(output=True)
-    print(f"Resources: {plan.resources}")
+    print(f"Outputs: {plan.outputs}")
     print(f"Variables: {plan.variables}")
     assert False
     # assert 'module.module-test-repo.github_repository.default' in plan.resources
