@@ -39,7 +39,7 @@ We stay up to date with the latest version of Terraform, but control the version
 
 ### Tests
 
-Our versioned Terraform modules have unit tests; these are written using [Terratest](https://pkg.go.dev/github.com/gruntwork-io/terratest#section-readme) and Go.
+Our versioned Terraform modules have unit tests; these are written using [tftest](https://pypi.org/project/tftest/) and Python.
 
 Your branch should ensure that changes you have made are reflected in the tests, and that these unit tests pass before raising a pull request.
 
