@@ -1,0 +1,35 @@
+name: Terraform Unit Tests
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions: 
+  contents: read
+
+env:
+  TF_VAR_github_token: ${{ secrets.TERRAFORM_TEST_ORG_PAT }}
+  TF_IN_AUTOMATION: true
+
+jobs:
+  terraform-tests:
+    name: Run Terraform Python Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4 
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Terraform Unit Tests
+        run: |
+          pytest test/
