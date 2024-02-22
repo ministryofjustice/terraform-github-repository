@@ -1,5 +1,5 @@
 module "module-test-repo" {
-  source  = "github.com/ministryofjustice/terraform-github-repository?ref=python-unit-tests"
+  source  = "github.com/ministryofjustice/terraform-github-repository"
 
   name            = "module-test-repo"
   description     = "This repository was created by the terraform github repository unit test"
