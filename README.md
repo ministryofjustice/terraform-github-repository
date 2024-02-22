@@ -4,6 +4,13 @@
 
 Module in Terraform registry: https://registry.terraform.io/modules/ministryofjustice/repository/github/latest 
 
+## Setup Pre-commit
+
+Setup Terraform format pre-commit
+    
+`make setup-precommit'
+
+
 ## Usage
 
 ```hcl
