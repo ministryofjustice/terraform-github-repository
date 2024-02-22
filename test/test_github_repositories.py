@@ -6,6 +6,7 @@ from tftest import TerraformTest
 @pytest.fixture(scope='module')
 def tf_test():
     fixtures_dir = os.path.join(os.path.dirname(__file__), 'fixtures/github_repos')
+    print(f"Fixtures Firectory: {fixtures_dir}")
     tf = TerraformTest(tfdir=fixtures_dir)
     tf.setup(cleanup_on_exit=True)
     yield tf
