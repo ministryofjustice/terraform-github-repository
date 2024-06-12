@@ -36,7 +36,7 @@ resource "github_repository" "default" {
     dynamic "advanced_security" {
       for_each = var.visibility == "public" ? [] : [1]
       content {
-        status = "enabled"
+        status = "disabled"
       }
     }
     secret_scanning {
