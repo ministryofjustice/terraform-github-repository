@@ -40,10 +40,10 @@ resource "github_repository" "default" {
       }
     }
     secret_scanning {
-      status = "enabled"
+      status = var.visibility == "public" ? "enabled" : "disabled"
     }
     secret_scanning_push_protection {
-      status = "enabled"
+      status = var.visibility == "public" ? "enabled" : "disabled"
     }
   }
 
