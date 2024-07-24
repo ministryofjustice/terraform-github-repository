@@ -22,7 +22,7 @@ jobs:
     if: github.event_name != 'workflow_dispatch'
     steps:
     - name: Delete Old Comments
-      uses: maheshrayas/action-pr-comment-delete@v06d7254b4aeba4491a66a7e0f755b107f7373ccd # v3.0
+      uses: maheshrayas/action-pr-comment-delete@06d7254b4aeba4491a66a7e0f755b107f7373ccd # v3.0
       with:
         github_token: '${{ secrets.GITHUB_TOKEN }}'
         org: ministryofjustice
