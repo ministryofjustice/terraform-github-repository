@@ -42,3 +42,4 @@ jobs:
         tflint_exclude: terraform_unused_declarations
         tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
+        trivy_ignore: .trivyignore.yaml

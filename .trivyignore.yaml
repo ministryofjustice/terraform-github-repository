@@ -1,0 +1,2 @@
+misconfigurations:
+  - id: AVD-GIT-0001 # ignore public repo CRITICAL vulnerability 
