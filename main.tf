@@ -1,16 +1,6 @@
 # Repository basics
 #tfsec:ignore:github-repositories-private
 
-moved {
-  from = github_repository.this
-  to   = github_repository.default
-}
-
-moved {
-  from = github_branch_protection.this
-  to   = github_branch_protection.default
-}
-
 resource "github_repository" "default" {
   name                   = var.name
   description            = join(" • ", [var.description, "This repository is defined and managed in Terraform"])
