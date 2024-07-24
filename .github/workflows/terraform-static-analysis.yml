@@ -22,7 +22,7 @@ jobs:
     if: github.event_name != 'workflow_dispatch'
     steps:
     - name: Delete Old Comments
-      uses: maheshrayas/action-pr-comment-delete@v3.0
+      uses: maheshrayas/action-pr-comment-delete@06d7254b4aeba4491a66a7e0f755b107f7373ccd # v3.0
       with:
         github_token: '${{ secrets.GITHUB_TOKEN }}'
         org: ministryofjustice
@@ -34,7 +34,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Run Analysis
-      uses: ministryofjustice/github-actions/terraform-static-analysis@7855159a5c3a9bcd658207c894cc4ed22bd35a22 # v15.3.0
+      uses: ministryofjustice/github-actions/terraform-static-analysis@8e1bfc920f829ce408a5ef84118fbc160e559066 # v18.1.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -42,3 +42,4 @@ jobs:
         tflint_exclude: terraform_unused_declarations
         tfsec_trivy: trivy
         checkov_exclude: CKV_GIT_1
+        trivy_ignore: .trivyignore.yaml
