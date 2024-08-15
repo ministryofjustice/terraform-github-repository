@@ -93,5 +93,4 @@ No modules.
 | <a name="output_pullers"></a> [pullers](#output\_pullers) | n/a |
 | <a name="output_pushers"></a> [pushers](#output\_pushers) | n/a |
 | <a name="output_repository"></a> [repository](#output\_repository) | n/a |
-| <a name="output_tag_protection"></a> [tag\_protection](#output\_tag\_protection) | n/a |
 <!-- END_TF_DOCS -->
