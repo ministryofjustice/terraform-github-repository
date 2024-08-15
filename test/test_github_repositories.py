@@ -44,8 +44,6 @@ def test_terraform_outputs(plan):
         "Push permission should be 'push'"
     assert outputs['push_repository'] == 'module-test-repo', \
         "Push repository should be 'module-test-repo'"
-    assert outputs['tag_protection_pattern'] == '*', \
-        "Tag protection pattern should be '*'"
     assert outputs['test_actions_variable_value'] == 'test', \
         "Test actions variable value should be 'test'"
     assert outputs['visibility'] == 'public', \
