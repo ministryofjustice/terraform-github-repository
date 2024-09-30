@@ -14,6 +14,18 @@ variable "homepage_url" {
   default     = ""
 }
 
+variable "template" {
+  description = "Template repository to use when creating the repository"
+  type = object({
+    owner      = string
+    repository = string
+  })
+  default = {
+    owner      = "ministryofjustice"
+    repository = "template-repository"
+  }
+}
+
 variable "secrets" {
   type        = map(any)
   description = "key:value map for GitHub actions secrets"
