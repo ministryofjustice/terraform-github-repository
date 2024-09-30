@@ -77,6 +77,7 @@ No modules.
 | <a name="input_required_checks"></a> [required\_checks](#input\_required\_checks) | List of required checks | `list(string)` | `[]` | no |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | key:value map for GitHub actions secrets | `map(any)` | `{}` | no |
 | <a name="input_team_access"></a> [team\_access](#input\_team\_access) | Team access types for created repository | <pre>object({<br>    admin    = optional(list(string))<br>    maintain = optional(list(string))<br>    push     = optional(list(string))<br>    pull     = optional(list(string))<br>  })</pre> | <pre>{<br>  "admin": [],<br>  "maintain": [],<br>  "pull": [],<br>  "push": []<br>}</pre> | no |
+| <a name="input_template"></a> [template](#input\_template) | Template repository to use when creating the repository | <pre>object({<br>    owner      = string<br>    repository = string<br>  })</pre> | <pre>{<br>  "owner": "ministryofjustice",<br>  "repository": "template-repository"<br>}</pre> | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | n/a | `list(string)` | `[]` | no |
 | <a name="input_type"></a> [type](#input\_type) | Type of repository: `core`, `module`, `template`. Defaults to `core` | `string` | `"core"` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | key:value map for repository variables | `map(any)` | `{}` | no |
