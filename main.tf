@@ -38,8 +38,8 @@ resource "github_repository" "default" {
   }
 
   template {
-    owner      = var.template_owner
-    repository = var.template_repository
+    owner      = var.template.owner
+    repository = var.template.repository
   }
 
   # The `pages.source` block doesn't support dynamic blocks in GitHub provider version 4.3.2,
